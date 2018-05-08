@@ -1,0 +1,17 @@
+Ľubomír Gallovič - xgallo03
+Projekt k predmetu PDS
+DHCP Útoky
+
+Obsiahnuté súbory:
+pds-dhcpstarve.cpp - zdrojový kód pre útok DHCP starve
+pds-dhcprogue.cpp - zdrojový kód pre útok DHCP rogue server
+common.c - zdrojový kód spoločný pre obidva typy útokov
+common.h - hlavičkový súbor
+Makefile
+
+Príklad spustenia:
+kompilácia: make
+DHCP starvation: ./pds-dhcpstarve -i interface
+DHCP rogue server: ./pds-dhcprogue -i interface -p pool -g gateway -n dns-server -d domain -l lease-time 
+
+Program bol testovaný na reálnej a virtuálnej sieti, a neboli zistené žiadne vážne nedostatky.
